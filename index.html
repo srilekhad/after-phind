@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Rental Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>House Rental Website</h1>
+    </header>
+
+    <div class="container">
+        <h2>Find Your Dream Home</h2>
+        <form id="rentalForm">
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="bedrooms">Bedrooms</label>
+                <select id="bedrooms" name="bedrooms">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="priceRange">Price Range</label>
+                <input type="range" id="priceRange" name="priceRange" min="500" max="5000" step="100" required>
+            </div>
+            <div class="form-group">
+                <label>Features</label>
+                <div>
+                    <input type="checkbox" id="pool" name="pool">
+                    <label for="pool">Pool</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="gym" name="gym">
+                    <label for="gym">Gym</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <fieldset>
+                    <legend>Pet Friendly</legend>
+                    <div>
+                        <input type="radio" id="yes" name="petFriendly" value="yes">
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="no" name="petFriendly" value="no">
+                        <label for="no">No</label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="form-group">
+                <button type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2023 House Rental Website. All rights reserved.</p>
+        <p>Address: 123 Main St, Anytown, USA</p>
+        <p>Email: info@houserental.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </div>
+
+    <script>
+        document.getElementById('rentalForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Implement form submission logic here
+            alert('Form submitted!');
+        });
+    </script>
+</body>
+</html>
